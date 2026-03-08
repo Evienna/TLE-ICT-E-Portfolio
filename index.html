@@ -3,28 +3,24 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Vivienne's E-Portfolio</title>
+    <title>Vivienne's E-Portfolio</title>
     <link rel="stylesheet" href="php.css" type="text/css">
-	<style type="text/css">
+    <style type="text/css">
+        pre {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 8px;
+            border: 7px double #27004b;
+        }
 
+        pre2 {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 8px;
+            border: 7px solid #27004b;
+        }
 
-    		pre 
-		{
-      			background-color: #f4f4f4;
-      			padding: 20px;
-      			border-radius: 8px;
-			border: 7px double #27004b;
-    		}
-
-		pre2 
-		{
-      			background-color: #f4f4f4;
-      			padding: 20px;
-      			border-radius: 8px;
-			border: 7px solid #27004b;
-    		}
-
-		/* LIGHTBOX CSS - You can also move this to your php.css file */
+        /* LIGHTBOX CSS - You can also move this to your php.css file */
         #lightbox {
             position: fixed;
             top: 0; left: 0;
@@ -45,12 +41,12 @@
         .hidden {
             display: none !important;
         }
-        </style>
-    
+    </style>
 </head>
 
 <body>
 
+    <h1 id="greeting" class="h1" style="text-align: center; font-size: 1.2rem; background: #27004b; color: white; margin: 0; padding: 10px;">Hello!</h1>
 
     <h1 class="h1">Vivienne's E-Portfolio</h1>
 
@@ -62,151 +58,77 @@
         <span class="navspan"></span>
     </nav>
 
-
-<div class="h2">
-<img src="MY PERSONAL SPACE.png" alt="MY PERSONAL SPACE BANNER" width="100%" height="100%">
-</div>
-
-<br>
-<hr style="border: 7px dotted #6f0494;">
-<br>
-
-<main class="content">
-<section class="personal-section">
-    <div class="collage">
-    <img src="vivienne.jpg" alt="Vivienne's Pictures" width="1000px" height="400px">
+    <div class="h2">
+        <img src="MY PERSONAL SPACE.png" alt="MY PERSONAL SPACE BANNER" width="100%" height="100%">
     </div>
 
-    <div class="personal-details">
-        <h2>♡ Personal Details ♡</h2>
-        <p><strong>Name:</strong> Vivienne Zuri A. Abenoja</p>
-        <p><strong>Age:</strong> 14</p>
-        <p><strong>Birthday:</strong> December 20, 2010</p>
-        <h3>Favorites</h3>
-        <ul>
-            <li>Food: Blueberries</li>
-            <li>Dish: Caesar Salad</li>
-            <li>Animal: Butterflies</li>
-            <li>Color: Purple</li>
-            <li>Subject: Science</li>
-        </ul>
-    </div>
-</section>
+    <br>
+    <hr style="border: 7px dotted #6f0494;">
+    <br>
 
-<hr style="border: 7px dotted #6f0494;">
-
-
-<section class="carda">
-    <h2>&#9702;&#9676; Circle of Friends &#9676;&#9702;</h2>
-    <div class="flip-container">
-
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <img src="lorraine.jpg" alt="Lorraine's picture" width="180px" height="240px"></h3>
-                </div>
-                <div class="flip-card-back">
-		    <h3>Lorraine Pagunsan</h3>
-                    <p>Besties since Grade 4!</p>
-                    <p>Loves Chase Atlantic</p>
-                    <p>Likes reading</p>
-                </div>
+    <main class="content">
+        <section class="personal-section">
+            <div class="collage">
+                <img src="vivienne.jpg" class="thumbnail" alt="Vivienne's Pictures" width="1000px" height="400px" style="cursor: zoom-in;">
             </div>
-        </div>
 
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <img src="bela.jpg" alt="Bela's picture" width="180px" height="240px"></h3>
-                </div>
-                <div class="flip-card-back">
-		    <h3>Bela Paguigan</h3>
-                    <p>Besties since Grade 4!</p>
-                    <p>Loves pink and flowers</p>
-                    <p>Likes K-pop and is good at drawing</p>
-                </div>
+            <div class="personal-details">
+                <h2>♡ Personal Details ♡</h2>
+                <p><strong>Name:</strong> Vivienne Zuri A. Abenoja</p>
+                <p><strong>Age:</strong> 14</p>
+                <p><strong>Birthday:</strong> December 20, 2010</p>
+                <h3>Favorites</h3>
+                <ul>
+                    <li>Food: Blueberries</li>
+                    <li>Dish: Caesar Salad</li>
+                    <li>Animal: Butterflies</li>
+                    <li>Color: Purple</li>
+                    <li>Subject: Science</li>
+                </ul>
             </div>
-        </div>
+        </section>
 
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="eldryn.png" alt="Eldryn's picture" width="180px" height="310px">
-                </div>
-                <div class="flip-card-back">
-		    <h3>Eldryn Pagsinuhin</h3>
-                    <p>Bestie since Grade 8!</p>
-                    <p>Loves the color green</p>
-                    <p>Likes gaming</p>
-                </div>
-            </div>
-        </div>
+        <hr style="border: 7px dotted #6f0494;">
 
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="chiara.jpg" alt="Chiara's picture" width="180px" height="240px">
+        <section class="carda">
+            <h2>&#9702;&#9676; Circle of Friends &#9676;&#9702;</h2>
+            <div class="flip-container">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="lorraine.jpg" class="thumbnail" alt="Lorraine" width="180px" height="240px">
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Lorraine Pagunsan</h3>
+                            <p>Besties since Grade 4!</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="flip-card-back">
-		    <h3>Chiara Ligas</h3>
-                    <p>Seatmate 4th Qtr Grade 8!</p>
-                    <p>Loves pasta</p>
-                    <p>Good at reporting</p>
-                </div>
-            </div>
-        </div>
 
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="zoe.jpg" alt="Zoe's picture" width="180px" height="240px">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="bela.jpg" class="thumbnail" alt="Bela" width="180px" height="240px">
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Bela Paguigan</h3>
+                            <p>Loves pink and flowers</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="flip-card-back">
-		    <h3>Zoe Rios</h3>
-                    <p>Known her since Grade 6!</p>
-                    <p></p>
-                    <p></p>
                 </div>
-            </div>
-        </div>
+        </section>
 
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="jaz.jpg" alt="Jaz's picture" width="180px" height="240px">
-                </div>
-                <div class="flip-card-back">
-		    <h3>Jazmin Caybayab</h3>
-                    <p>Known her since Grade 7!</p>
-                    <p></p>
-                    <p></p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<hr style="border: 7px dotted #6f0494;">
+        <hr style="border: 7px dotted #6f0494;">
 
         <section class="card">
             <h2>&#9826; My Family &#9826;</h2>
-            <p style="text-align:justify;">My family consists of me, my mom, my dad and my two younger siblings. My brother Zach is 9 while my sister Zhiloh is 5. My dad is hardworking and very busy with work always. My mom is hardworking too and helps more with the planning family activites. My brother and sister are both very cheerful and energetic. </p>
-        </section>
-
-        <section class="media">
-            <h2>My Family Pictures</h2>
-            <div class="video">
-                <video controls>
-                    video.mp4
-                    Your browser does not support the video tag.
-                </video>
-            </div>
+            <p style="text-align:justify;">My family consists of me, my mom, my dad and my two younger siblings...</p>
         </section>
 
     </main>
 
-<div id="lightbox" class="hidden">
+    <div id="lightbox" class="hidden">
         <img id="lightbox-img" src="">
     </div>
 
