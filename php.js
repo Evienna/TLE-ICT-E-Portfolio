@@ -1,6 +1,3 @@
-// This alert is just for testing. Delete the next line once you see it works!
-alert("JS is working!"); 
-
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
 const thumbnails = document.querySelectorAll(".thumbnail");
