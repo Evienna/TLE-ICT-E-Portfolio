@@ -1,17 +1,18 @@
-// 2. LIGHTBOX LOGIC
+// This alert is just for testing. Delete the next line once you see it works!
+alert("JS is working!"); 
+
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
 const thumbnails = document.querySelectorAll(".thumbnail");
 
-// This looks for any image with the class "thumbnail" and makes it clickable
 thumbnails.forEach(img => {
-    img.addEventListener("click", () => {
+    img.onclick = function() {
+        console.log("Image clicked!"); // This shows in the 'Inspect' console
         lightbox.classList.remove("hidden");
-        lightboxImg.src = img.src;
-    });
+        lightboxImg.src = this.src;
+    }
 });
 
-// Close when clicking the dark background
-lightbox.addEventListener("click", () => {
+lightbox.onclick = function() {
     lightbox.classList.add("hidden");
-});
+};
