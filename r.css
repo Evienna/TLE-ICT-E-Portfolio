@@ -76,3 +76,52 @@
 			.navbar a:nth-child(4):hover ~ .navspan {
 			    left: 732px;
 		}
+
+/* Vertical Line */
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px 0;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: #27004b; /* Your dark purple */
+    top: 0; bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+
+/* Individual Items */
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+    /* This makes them invisible and shifted down at first */
+    opacity: 0;
+    transform: translateY(30px); 
+    transition: all 0.6s ease-out;
+}
+
+/* The "Reveal" class added by JS */
+.timeline-item.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Alternating Sides */
+.left { left: 0; text-align: right; }
+.right { left: 50%; text-align: left; }
+
+/* The boxes around the text */
+.timeline-content {
+    padding: 20px;
+    background: #f4f4f4;
+    border: 7px solid #27004b;
+    border-radius: 8px;
+    box-shadow: 5px 5px 0px #6f0494;
+}
