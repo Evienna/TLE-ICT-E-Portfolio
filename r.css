@@ -185,17 +185,17 @@ body {
 }
 
 .timeline-item::before {
-    content: '❤'; /* You can use a heart, a circle '●', or leave it empty */
+    content: '❤';
     position: absolute;
-    left: -58px; /* Centers it on the purple line */
-    top: 20px;
-    width: 25px;
-    height: 25px;
+    left: -59px; /* This usually hits the sweet spot for a 6px line */
+    top: 30px;   /* Lowered it slightly to align with the header */
+    width: 26px;
+    height: 26px;
     background-color: #27004b;
     color: white;
     border-radius: 50%;
     text-align: center;
-    line-height: 25px;
+    line-height: 26px;
     font-size: 12px;
     z-index: 2;
     border: 3px solid #fff;
