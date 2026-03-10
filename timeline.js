@@ -1,20 +1,18 @@
-const items = document.querySelectorAll('.timeline-item');
-
-const showItems = () => {
-    // Reveal when the item is 80% of the way up the screen
-    const triggerBottom = window.innerHeight / 5 * 4;
-
-    items.forEach(item => {
-        const itemTop = item.getBoundingClientRect().top;
-
-        if(itemTop < triggerBottom) {
-            item.classList.add('show');
-        }
-    });
+const observerOptions = {
+    root: null,
+    threshold: 0.1, // Triggers when just 10% of the box is visible
+    rootMargin: "0px 0px -50px 0px" // Triggers slightly before it hits the view
 };
 
-// Listen for scrolling
-window.addEventListener('scroll', showItems);
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            observer.unobserve(entry.target); // Stops watching once revealed
+        }
+    });
+}, observerOptions);
 
-// Run once on load just in case some are already visible
-showItems();
+document.querySelectorAll('.timeline-item').forEach(item => {
+    observer.observe(item);
+});
