@@ -77,51 +77,97 @@
 			    left: 732px;
 		}
 
-/* Vertical Line */
+/* Container for the whole timeline */
 .timeline {
     position: relative;
-    max-width: 900px;
+    max-width: 1000px; /* Wider for hefty content */
     margin: 50px auto;
-    padding: 20px 0;
+    padding: 20px 0 20px 60px; /* Extra padding on left for the line */
 }
 
+/* The vertical line - Moved to the left side */
 .timeline::after {
     content: '';
     position: absolute;
-    width: 4px;
-    background-color: #27004b; /* Your dark purple */
-    top: 0; bottom: 0;
-    left: 50%;
-    margin-left: -2px;
+    width: 6px;
+    background-color: #27004b; 
+    top: 0; 
+    bottom: 0;
+    left: 30px; /* Positioned on the left */
+    border-radius: 10px;
 }
 
-/* Individual Items */
+/* Individual Reflection Blocks */
 .timeline-item {
-    padding: 10px 40px;
     position: relative;
-    width: 50%;
-    box-sizing: border-box;
-    /* This makes them invisible and shifted down at first */
+    margin-bottom: 80px; /* Space between months */
+    width: 95%; 
     opacity: 0;
-    transform: translateY(30px); 
-    transition: all 0.6s ease-out;
+    transform: translateX(100px); /* Slides in from the right */
+    transition: all 0.8s ease-out;
 }
 
-/* The "Reveal" class added by JS */
+/* Triggered by JS */
 .timeline-item.show {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
 }
 
-/* Alternating Sides */
-.left { left: 0; text-align: right; }
-.right { left: 50%; text-align: left; }
-
-/* The boxes around the text */
+/* The "Box" style */
 .timeline-content {
-    padding: 20px;
+    padding: 25px;
     background: #f4f4f4;
     border: 7px solid #27004b;
-    border-radius: 8px;
-    box-shadow: 5px 5px 0px #6f0494;
+    border-radius: 12px;
+    box-shadow: 8px 8px 0px #6f0494;
 }
+
+/* Reflection Heading */
+.timeline-content h2 {
+    margin-top: 0;
+    color: #27004b;
+    font-size: 1.8rem;
+}
+
+/* Hefty Text Styling */
+.reflection-text {
+    line-height: 1.8;
+    text-align: justify;
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* 2x2 Media Grid */
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 15px;
+}
+
+.media-grid img, .media-grid video {
+    width: 100%;
+    height: 250px; /* Slightly taller for better detail */
+    object-fit: cover;
+    border-radius: 8px;
+    border: 3px solid #27004b;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for media */
+.media-grid img:hover {
+    transform: scale(1.03);
+    cursor: zoom-in;
+}
+
+
+
+
+
+
+
+
+
+
+
+
