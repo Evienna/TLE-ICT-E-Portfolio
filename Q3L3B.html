@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .container {
+    /* Box Model - Dimensions */
+    width: 80%;
+    height: 400px;
+    /* Box Model - Margin/Border/Padding */
+    margin: 20px auto;
+    border: 5px solid black;
+    padding: 20px;
+    /* Background Image & Attachment */
+    background-image: url('https://via.placeholder.com/150');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: scroll;
+  }
+
+  .relative-box {
+    /* Element Positioning - Relative */
+    position: relative;
+    top: 10px;
+    left: 20px;
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+  }
+
+  .float-image {
+    /* Float Property */
+    float: right;
+    width: 100px;
+    margin-left: 10px;
+  }
+
+  .fixed-nav {
+    /* Element Positioning - Fixed */
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: navy;
+    color: white;
+    padding: 10px;
+  }
+</style>
+</head>
+<body>
+
+  <div class="fixed-nav">Fixed Navigation</div>
+
+  <div class="container">
+    <img src="https://via.placeholder.com/50" class="float-image" alt="sample">
+    <h3>Lesson 3 Box Model & Positioning</h3>
+    <p>
+      The image to the right is floated, allowing this text to wrap around it. 
+      The main container demonstrates the box model with margins, borders, and padding.
+    </p>
+    
+    <div class="relative-box">Relative Box</div>
+  </div>
+
+</body>
+</html>
