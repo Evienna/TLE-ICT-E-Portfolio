@@ -110,26 +110,55 @@ body {
     bottom: 0;
     left: 50px;
     border-radius: 10px;
-    z-index: 1; /* Keep the line at layer 1 */
+    z-index: 0; /* Keep the line at the very back */
 }
 
 /* The Heart Circles */
 .timeline-item::before {
     content: '❤';
     position: absolute;
-    left: -60px; /* Adjust slightly to center on the 6px line */
-    top: 30px;
-    width: 26px;
-    height: 26px;
+    /* This calculation centers a 32px heart on a line at 50px */
+    /* (50px position + 3px half-width of line) - 16px half-width of heart = 37px offset from the left edge of padding */
+    left: -63px; 
+    top: 25px;
+    width: 32px; /* Made slightly bigger to be more visible */
+    height: 32px;
     background-color: #27004b;
     color: white;
     border-radius: 50%;
     text-align: center;
-    line-height: 26px;
-    font-size: 12px;
-    z-index: 10; /* Higher number brings it to the VERY front */
+    line-height: 32px; /* Match height to center the icon */
+    font-size: 14px;
+    z-index: 99; /* Higher than EVERYTHING else */
     border: 3px solid #fff;
     box-shadow: 0 0 10px rgba(111, 4, 148, 0.4);
+}
+
+/* 6. HEADERS - Bigger and bolder */
+.timeline-content h2 {
+    color: #27004b;
+    margin-top: 0;
+    font-family: 'Georgia', serif;
+    border-bottom: 4px solid #6f0494; /* Thicker underline */
+    display: inline-block;
+    padding-bottom: 5px;
+    font-size: 2.2rem; /* Much bigger header size */
+    letter-spacing: 1px;
+}
+
+/* 7. MEDIA GRID - To stop the "frame" from being too big */
+.media-grid img, .media-grid video {
+    width: 100%;
+    height: auto;
+    max-height: 500px; /* Prevents portrait photos from being too tall */
+    object-fit: contain; 
+    border-radius: 12px;
+    border: 3px solid #27004b;
+    /* Added this to make sure the border "hugs" the image */
+    display: block; 
+    aspect-ratio: auto; /* Removes any forced squaring */
+    object-fit: contain; /* Shows the WHOLE image without cropping */
+    background-color: transparent; /* Removes the black bars if the image is small */
 }
 
 /* 4. INDIVIDUAL ITEMS */
@@ -168,16 +197,6 @@ body {
     box-shadow: 15px 15px 0px #6f0494; /* Deepens the shadow */
 }
 
-/* 6. HEADINGS & TEXT */
-.timeline-content h2 {
-    color: #27004b;
-    margin-top: 0;
-    font-family: 'Georgia', serif; /* Matching your style */
-    border-bottom: 2px solid #6f0494;
-    display: inline-block;
-    padding-bottom: 5px;
-}
-
 .reflection-text {
     line-height: 1.8;
     text-align: justify;
@@ -194,16 +213,6 @@ body {
     gap: 20px;
     margin-top: 25px;
     width: 100%;
-}
-
-.media-grid img, .media-grid video {
-    width: 100%;
-    height: auto; /* This allows the frame to adjust to the image's height */
-    aspect-ratio: auto; /* Removes any forced squaring */
-    object-fit: contain; /* Shows the WHOLE image without cropping */
-    border-radius: 12px;
-    border: 3px solid #27004b;
-    background-color: transparent; /* Removes the black bars if the image is small */
 }
 
 /* 8. OPTIONAL: HOVER EFFECT */
