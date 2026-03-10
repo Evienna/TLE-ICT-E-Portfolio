@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript -TLE/ICT 9 - Lesson 2 Browser Output</title>
+
+    <script type="text/javascript">
+        // 1. Case Sensitivity Guideline: myHome vs MyHome
+        var myHome = "Manila";
+        
+        // This function will be called by the <body> onload event
+        function intro() {
+            alert("Welcome Visitor! \nThis script was pre-loaded in the HEAD.");
+        }
+    </script>
+</head>
+
+<body onload="intro()">
+
+    <h2>JavaScript Placement & Guidelines</h2>
+    <hr>
+
+    <h3>1. Body Section Output:</h3>
+    <p>
+        <script type="text/javascript">
+            // Scripts in the BODY execute as the page loads
+            document.write("Message by JavaScript: This line was generated inside the <body>.");
+        </script>
+    </p>
+
+    <h3>2. Multiple Sections (Head & Body):</h3>
+    <p>
+        <script type="text/javascript">
+            // Re-using the variable from the Head to prove it loaded
+            document.write("The variable 'myHome' from the Head is: " + myHome);
+        </script>
+    </p>
+
+    <h3>3. Commenting & Breaking Lines:</h3>
+    <p>
+        <script type="text/javascript">
+            /* This is a multiple line comment.
+               It will not be visible on the browser screen.
+            */
+            
+            // Single line comment: Showing line breaking with backslash
+            document.write("Displaying text with a break: wow \
+            Philippines");
+            
+            // Note: document.\write() would cause an error and stop this script!
+        </script>
+    </p>
+
+    <h3>4. External JavaScript (Example Tag):</h3>
+    <p><em>(The external script tag is written in the code but requires a separate .js file to run.)</em></p>
+
+</body>
+</html>
