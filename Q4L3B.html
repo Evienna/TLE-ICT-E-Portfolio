@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Javascript TLE/ICT 9 - Lesson 3 Browser Output</title>
+    <script type="text/javascript">
+        // 1. Declaring Variables (Rule: first char cannot be a digit)
+        var studentName = "Basilio"; // String
+        var age = 15;                // Integer
+        var gpa = 94.5;              // Float/Double
+        var isEnrolled = true;       // Boolean
+        
+        // 2. Concatenation using '+' and Case Sensitivity
+        var firstName = "Crispin";
+        var firstname = "Santiago"; // Different from firstName
+    </script>
+</head>
+<body>
+
+    <h1>JavaScript Characteristics & Objects</h1>
+    <p>This page demonstrates Client-Side Scripting (executed on your machine).</p>
+    <hr>
+
+    <h3>1. Document Object (Properties & Methods)</h3>
+    <script type="text/javascript">
+        // Using the 'write' method
+        document.write("<strong>Welcome, " + studentName + "!</strong><br>");
+        
+        // Displaying last modified property
+        document.write("Page Last Modified: " + document.lastModified);
+    </script>
+
+    <h3>2. Math Object (Methods)</h3>
+    <script type="text/javascript">
+        var numA = 10;
+        var numB = 20;
+        document.write("Higher value between 10 and 20: " + Math.max(numA, numB) + "<br>");
+        document.write("Value of PI: " + Math.PI + "<br>");
+        document.write("2 to the power of 3: " + Math.pow(2, 3));
+    </script>
+
+    <h3>3. Navigator Object (Browser Info)</h3>
+    <script type="text/javascript">
+        document.write("Browser Name: " + navigator.appName + "<br>");
+        document.write("Operating System: " + navigator.platform);
+    </script>
+
+    <h3>4. Data Types & Comments</h3>
+    <script type="text/javascript">
+        // Using single line comment
+        /* Using multiple line 
+           comment to explain types */
+        
+        var mystery; // Undefined type
+        document.write("Variable without value is: " + mystery + "<br>");
+        document.write("Concatenating Strings: " + firstName + " and " + firstname);
+    </script>
+
+</body>
+</html>
