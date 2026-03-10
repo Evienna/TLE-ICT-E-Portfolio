@@ -113,37 +113,51 @@ body {
     z-index: 0; /* Keep the line at the very back */
 }
 
-/* The Heart Circles */
+/* 4. INDIVIDUAL ITEMS */
+.timeline-item {
+    position: relative;
+    width: 100%; 
+    margin-bottom: 80px;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.8s ease-out;
+    box-sizing: border-box;
+    display: block;
+    z-index: 2; /* FORCES the whole item and its heart to stay above the line */
+}
+
+/* THE HEART CIRCLES */
 .timeline-item::before {
     content: '❤';
     position: absolute;
-    /* This calculation centers a 32px heart on a line at 50px */
-    /* (50px position + 3px half-width of line) - 16px half-width of heart = 37px offset from the left edge of padding */
-    left: -63px; 
+    left: -63px; /* Center calculation */
     top: 25px;
-    width: 32px; /* Made slightly bigger to be more visible */
+    width: 32px;
     height: 32px;
     background-color: #27004b;
     color: white;
     border-radius: 50%;
     text-align: center;
-    line-height: 32px; /* Match height to center the icon */
+    line-height: 32px;
     font-size: 14px;
-    z-index: 99; /* Higher than EVERYTHING else */
+    z-index: 99; /* Higher than everything */
     border: 3px solid #fff;
     box-shadow: 0 0 10px rgba(111, 4, 148, 0.4);
+    /* Pulsing Animation */
+    animation: pulse 2s infinite;
 }
 
-/* 6. HEADERS - Bigger and bolder */
+/* 6. HEADERS - Bigger and Bolder */
 .timeline-content h2 {
     color: #27004b;
     margin-top: 0;
     font-family: 'Georgia', serif;
-    border-bottom: 4px solid #6f0494; /* Thicker underline */
+    border-bottom: 5px solid #6f0494; /* Thicker stylish underline */
     display: inline-block;
-    padding-bottom: 5px;
-    font-size: 2.2rem; /* Much bigger header size */
+    padding-bottom: 8px;
+    font-size: 2.5rem; /* Large and clear */
     letter-spacing: 1px;
+    text-transform: uppercase; /* Makes it look like a professional heading */
 }
 
 /* 7. MEDIA GRID - To stop the "frame" from being too big */
@@ -159,18 +173,6 @@ body {
     aspect-ratio: auto; /* Removes any forced squaring */
     object-fit: contain; /* Shows the WHOLE image without cropping */
     background-color: transparent; /* Removes the black bars if the image is small */
-}
-
-/* 4. INDIVIDUAL ITEMS */
-.timeline-item {
-    position: relative;
-    width: 100%; 
-    margin-bottom: 80px;
-    opacity: 0; /* Starts invisible for the JS effect */
-    transform: translateX(50px); /* Slides in from the right */
-    transition: all 0.8s ease-out;
-    box-sizing: border-box;
-    display: block;
 }
 
 /* This class is added by timeline.js when you scroll */
@@ -215,10 +217,26 @@ body {
     width: 100%;
 }
 
-/* 8. OPTIONAL: HOVER EFFECT */
+/8./
 .media-grid img:hover {
     transform: scale(1.02);
     transition: 0.3s;
     cursor: pointer;
+}
+
+/* ANIMATION KEYFRAMES */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(39, 0, 75, 0.7);
+    }
+    70% {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 10px rgba(39, 0, 75, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(39, 0, 75, 0);
+    }
 }
 
