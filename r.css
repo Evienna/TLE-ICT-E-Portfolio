@@ -76,38 +76,38 @@
 			.navbar a:nth-child(4):hover ~ .navspan {
 			    left: 732px;
 		}
-
 /* Container for the whole timeline */
 .timeline {
     position: relative;
-    max-width: 1000px; /* Wider for hefty content */
-    margin: 50px auto;
-    padding: 20px 0 20px 60px; /* Extra padding on left for the line */
+    max-width: 1100px; /* Increased to allow more room */
+    margin: 40px auto;
+    padding: 20px 20px 20px 80px; /* 80px on the left creates the "gutter" for the line */
+    box-sizing: border-box;
 }
 
-/* The vertical line - Moved to the left side */
+/* The vertical line - Fixed on the left */
 .timeline::after {
     content: '';
     position: absolute;
     width: 6px;
-    background-color: #27004b; 
-    top: 0; 
+    background-color: #27004b;
+    top: 0;
     bottom: 0;
-    left: 30px; /* Positioned on the left */
+    left: 40px; /* Positioned inside the 80px padding */
     border-radius: 10px;
 }
 
 /* Individual Reflection Blocks */
 .timeline-item {
     position: relative;
-    margin-bottom: 80px; /* Space between months */
-    width: 95%; 
+    width: 100%; /* FIX: Forces the box to take up the whole available width */
+    margin-bottom: 60px;
     opacity: 0;
-    transform: translateX(100px); /* Slides in from the right */
+    transform: translateX(50px); /* Slide in effect */
     transition: all 0.8s ease-out;
+    box-sizing: border-box;
 }
 
-/* Triggered by JS */
 .timeline-item.show {
     opacity: 1;
     transform: translateX(0);
@@ -115,49 +115,47 @@
 
 /* The "Box" style */
 .timeline-content {
-    padding: 25px;
+    padding: 30px;
     background: #f4f4f4;
     border: 7px solid #27004b;
     border-radius: 12px;
-    box-shadow: 8px 8px 0px #6f0494;
+    box-shadow: 10px 10px 0px #6f0494;
+    width: 100%; /* FIX: Ensures content fills the item */
+    box-sizing: border-box;
+}
+
+/* The Grid for Media */
+.media-grid {
+    display: grid;
+    /* FIX: This makes 2 columns that stretch to fill the box */
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px;
+    margin-top: 25px;
+    width: 100%;
+}
+
+.media-grid img, .media-grid video {
+    width: 100%;
+    height: 300px; /* Taller for hefty content */
+    object-fit: cover;
+    border-radius: 8px;
+    border: 3px solid #27004b;
 }
 
 /* Reflection Heading */
 .timeline-content h2 {
     margin-top: 0;
+    font-size: 2rem;
     color: #27004b;
-    font-size: 1.8rem;
+    border-bottom: 3px solid #6f0494;
+    display: inline-block;
+    margin-bottom: 15px;
 }
 
-/* Hefty Text Styling */
 .reflection-text {
     line-height: 1.8;
     text-align: justify;
-    font-size: 1.1rem;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-/* 2x2 Media Grid */
-.media-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-    gap: 15px;
-}
-
-.media-grid img, .media-grid video {
-    width: 100%;
-    height: 250px; /* Slightly taller for better detail */
-    object-fit: cover;
-    border-radius: 8px;
-    border: 3px solid #27004b;
-    transition: transform 0.3s ease;
-}
-
-/* Hover effect for media */
-.media-grid img:hover {
-    transform: scale(1.03);
-    cursor: zoom-in;
+    font-size: 1.15rem;
 }
 
 
