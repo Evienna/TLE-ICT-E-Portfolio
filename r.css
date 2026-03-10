@@ -129,11 +129,11 @@ body {
     transform: translateX(0);
 }
 
-/* 5. THE CONTENT BOXES */
 .timeline-content {
     width: 100% !important; 
     padding: 30px;
-    background: #f4f4f4;
+    background: rgba(255, 255, 255, 0.85); 
+    backdrop-filter: blur(5px); 
     border: 7px solid #27004b;
     border-radius: 15px;
     box-shadow: 12px 12px 0px #6f0494;
