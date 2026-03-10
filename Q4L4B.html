@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Javascript - TLE/ICT 9 Lesson 4: Events & Logic </title>
+    <script type="text/javascript">
+        // 1. ALERT BOX FUNCTION
+        function show_alert() {
+            alert("WARNING! WARNING!");
+        }
+
+        // 2. PROMPT BOX & VARIABLES
+        function show_prompt() {
+            var name = prompt("Please enter your name:", "nameless");
+            // Validation using Logical AND (&&)
+            if (name != null && name != "") {
+                document.getElementById("display").innerHTML = "Welcome " + name + "! Please come in.";
+            }
+        }
+
+        // 3. CONFIRM BOX & IF-ELSE
+        function show_confirm() {
+            var ans = confirm("Do you want to proceed?");
+            if (ans == true) {
+                document.getElementById("display").innerHTML = "You have entered stage 2";
+            } else {
+                document.getElementById("display").innerHTML = "You are still at stage 1";
+            }
+        }
+
+        // 4. ARITHMETIC & CONCATENATION
+        function show_math() {
+            var x = 5 + 3 / 2 * 6; // Precedence: 3/2=1.5 -> 1.5*6=9 -> 5+9=14
+            var sentenceA = "Good";
+            var sentenceB = "Morning";
+            var result = sentenceA + " " + sentenceB + " " + 2 + 4; // Concatenation
+            
+            alert("Math Result (X): " + x + "\nString Result: " + result);
+        }
+    </script>
+    <style>
+        body { font-family: sans-serif; padding: 20px; line-height: 1.6; }
+        .box { border: 1px solid #ccc; padding: 15px; margin-bottom: 10px; border-radius: 5px; }
+        #display { font-weight: bold; color: blue; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript Events & Popups</h1>
+    
+    <div class="box">
+        <h3>1. Popup Boxes (onclick event)</h3>
+        <input type="button" onclick="show_alert()" value="Show Alert Box">
+        <input type="button" onclick="show_prompt()" value="Show Prompt Box">
+        <input type="button" onclick="show_confirm()" value="Show Confirm Box">
+        <div id="display">Results will appear here...</div>
+    </div>
+
+    <div class="box">
+        <h3>2. Mouse Events (mouseover/mouseout)</h3>
+        <button onmouseover="this.style.backgroundColor='yellow'" 
+                onmouseout="this.style.backgroundColor=''">
+            Hover over me!
+        </button>
+    </div>
+
+    <div class="box">
+        <h3>3. Math & Logic Test</h3>
+        <input type="button" onclick="show_math()" value="Run Math Calculation">
+    </div>
+
+    <div class="box">
+        <h3>4. Keyboard Events (onkeyup)</h3>
+        <input type="text" placeholder="Type something..." onkeyup="console.log('Key released!')">
+        <p><small>(Check browser console to see the 'onkeyup' log)</small></p>
+    </div>
+
+</body>
+</html>
