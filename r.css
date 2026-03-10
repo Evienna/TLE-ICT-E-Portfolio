@@ -183,3 +183,21 @@ body {
     transition: 0.3s;
     cursor: pointer;
 }
+
+.timeline-item::before {
+    content: '❤'; /* You can use a heart, a circle '●', or leave it empty */
+    position: absolute;
+    left: -58px; /* Centers it on the purple line */
+    top: 20px;
+    width: 25px;
+    height: 25px;
+    background-color: #27004b;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 25px;
+    font-size: 12px;
+    z-index: 2;
+    border: 3px solid #fff;
+    box-shadow: 0 0 10px rgba(111, 4, 148, 0.4);
+}
