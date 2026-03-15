@@ -1,183 +1,123 @@
-
-    		.h1 
-		{
-      			background-color: #FFFFFF;
-      			color: #023236;
-			padding: 20px;
-      			text-align: left;
-			width: 100%; 
-			height: 20px;
-			margin: 0;
-			align-items: center;
-    		}
-
-		.h2 
-		{
-			margin: 0;
-			height: 560px;
-    		}
-
-
-
-	
-    		.navbar
-    		{ 
-			position:sticky; 
-			width: 100%; 
-			height: 50px; 
-			display: flex; 
-			border-radius: 8px;
-			justify-content: left; 
-			align-items: center; 
-			padding-right: 40px;
-			padding-left: 40px;
-      			border-top: 7px double #FFFFFF;
-      			border-bottom: 7px double #FFFFFF;
-			background-color: #023236;
-			z-index: 1000;
-    		}
-		.nava
-		{
-			display: inline-block;
-			font-size: 20px;
-			font-family: poppins;
-			color:#FFFFFF;
-			padding-right: 40px;
-			padding-left: 40px;
-			justify-content: left;
-			align-items: left; 
-			text-decoration: none;
-			z-index: 1000;
-		}
-		.navspan
-		{
-			position: absolute;
-			top: 0;
-			left: 732px;
-			width: 190px;
-			height: 100%;
-			background: linear-gradient(45deg, #007055, #2ac2a9);
-			border-radius: 8px;
-			transition: left 0.5s;
-		}
-		
-		
-		/* Move the span when hovering over each link */
-			.navbar a:nth-child(1):hover ~ .navspan {
-			     left: 60px;
-		}
-			.navbar a:nth-child(2):hover ~ .navspan {
-			    left: 300px;
-		}
-			.navbar a:nth-child(3):hover ~ .navspan {
-			    left: 525px;
-		}
-			.navbar a:nth-child(4):hover ~ .navspan {
-			    left: 732px;
-		}
-
+/* 1. Reset & General Styles */
 body {
-    font-family: georgia;
+    font-family: Georgia, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light grey background to make cards pop */
 }
 
-.main-content {
-    flex: 1;
-    padding: 40px;
-    background-color: #67e5ac;
-    border-radius: 15px;
-    margin: 5%;
-    position: relative;
-    text-shadow: 1px 1px #f4fffc;
-
+.h1 {
+    background-color: #FFFFFF;
+    color: #023236;
+    padding: 20px;
+    text-align: left;
+    width: 100%; 
+    height: auto; /* Changed from 20px to auto so text doesn't clip */
+    margin: 0;
+    box-sizing: border-box;
 }
 
-.l1 {
-    background-color: #f4fffc;
-    border: 7px double #006052;
-    border-radius: 8px;
-    padding: 14px;
-    margin-bottom: 20px;
-    text-shadow: 1px 1px #8cffd9;
-    font-family: georgia;
-    font-size: 20px;
-    margin-top: 10px;
+.h2 {
+    margin: 0;
+    width: 100%;
+    height: auto; /* Prevent fixed height from stretching the banner */
 }
 
-.detailssummary {
-  margin: 0;
-  padding: 0;
+.h2 img {
+    width: 100%;
+    display: block;
 }
 
-.detailsdiv {
-  margin: 0;
-  padding: 0;
-  line-height: 1.3; /* Adjust spacing between lines */
+/* 2. Navbar Styles */
+.navbar { 
+    position: sticky; 
+    top: 0;
+    width: 100%; 
+    height: 55px; 
+    display: flex; 
+    justify-content: left; 
+    align-items: center; 
+    padding: 0 40px;
+    border-top: 7px double #FFFFFF;
+    border-bottom: 7px double #FFFFFF;
+    background-color: #023236;
+    z-index: 1000;
+    box-sizing: border-box;
 }
 
-details > *:not(summary) {
-  margin: 0;
-  padding: 0;
+.nava {
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    color: #FFFFFF;
+    padding: 0 30px;
+    text-decoration: none;
+    z-index: 1001;
 }
 
-div ul {
-	margin-top: -100px;
-}
-
-/* Container that holds Sidebar + Content */
+/* 3. CONSISTENT LAYOUT SYSTEM */
 .layout {
     display: flex;
     align-items: flex-start;
     max-width: 1200px; 
-    margin: 20px auto; 
+    margin: 30px auto; 
     gap: 30px;
+    padding: 0 20px;
 }
 
-/* Sidebar Box */
+/* Sidebar Styling */
 .sidebar {
     width: 280px;
-    flex-shrink: 0; /* Keeps width consistent */
+    flex-shrink: 0;
     background-color: #006052;
     color: white;
     padding: 25px;
     border-radius: 15px;
     position: sticky;
-    top: 20px;
+    top: 80px; /* Sits below the navbar when scrolling */
     box-sizing: border-box;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-/* Sidebar Title (Aralin) */
 .sidebar h2 {
-    margin: 0 0 15px 0;
+    margin: 0 0 20px 0;
     padding-bottom: 10px;
     border-bottom: 2px solid #67e5ac;
-    height: auto;
-    font-family: Georgia, serif; /* Keeps font consistent */
-    line-height: 1.2;
+    font-size: 24px;
 }
 
-/* The List of Links */
 .sidebar ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0; /* REMOVED THE -100px MARGIN HERE */
 }
 
 .sidebar ul li {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .sidebar ul li a {
     transition: all 0.3s ease;
     display: block;
-    padding: 8px 10px;
+    padding: 8px 12px;
     border-radius: 8px;
     color: white;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .sidebar ul li a:hover {
     background: rgba(255, 255, 255, 0.15);
-    padding-left: 18px; /* The "slide" effect */
+    padding-left: 20px;
     color: #67e5ac;
+}
+
+/* Main Content Box */
+.main-content {
+    flex: 1;
+    padding: 40px;
+    background-color: #67e5ac;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-sizing: border-box;
 }
