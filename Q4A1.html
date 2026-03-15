@@ -3,105 +3,33 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Vivienne's E-Portfolio</title>
+    <title>Vivienne's E-Portfolio</title>
     <link rel="stylesheet" href="ap.css" type="text/css">
-	<style type="text/css">
+    <style type="text/css">
+        /* Your existing styles... */
+        .lesson-header { border-bottom: 5px solid #006052; margin-bottom: 30px; padding-bottom: 10px; }
+        .timeline-grid { display: flex; justify-content: space-between; background: #023236; color: white; padding: 15px; border-radius: 8px; font-size: 0.9em; }
+        .comparison-container { display: flex; gap: 20px; margin: 20px 0; }
+        .card { flex: 1; padding: 20px; border-radius: 10px; border-left: 8px solid #006052; background: white; box-shadow: 4px 4px 10px rgba(0,0,0,0.1); }
+        .salik-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-top: 20px; }
+        .salik-item { background: #006052; color: white; padding: 20px; text-align: center; border-radius: 8px; font-weight: bold; transition: transform 0.3s; }
+        .salik-item:hover { transform: translateY(-5px); background: #2ac2a9; }
+        summary { cursor: pointer; font-weight: bold; padding: 10px; background: #f4fffc; border: 1px solid #006052; border-radius: 5px; }
+        .details-content { padding: 15px; background: white; border: 1px solid #ddd; border-top: none; } 
 
+        #progress-container { position: fixed; top: 0; left: 0; width: 100%; height: 5px; background: transparent; z-index: 2000; }
+        #progress-bar { height: 100%; background: #2ac2a9; width: 0%; }
 
-    		pre 
-		{
-      			background-color: #f4f4f4;
-      			padding: 20px;
-      			border-radius: 8px;
-			border: 7px double #27004b;
-    		}
-
-		pre2 
-		{
-      			background-color: #f4f4f4;
-      			padding: 20px;
-      			border-radius: 8px;
-			border: 7px solid #27004b;
-    		}
-
-  .lesson-header {
-    border-bottom: 5px solid #006052;
-    margin-bottom: 30px;
-    padding-bottom: 10px;
-}
-
-/* Timeline/Step design for Yugto */
-.timeline-grid {
-    display: flex;
-    justify-content: space-between;
-    background: #023236;
-    color: white;
-    padding: 15px;
-    border-radius: 8px;
-    font-size: 0.9em;
-}
-
-/* Comparison Cards */
-.comparison-container {
-    display: flex;
-    gap: 20px;
-    margin: 20px 0;
-}
-
-.card {
-    flex: 1;
-    padding: 20px;
-    border-radius: 10px;
-    border-left: 8px solid #006052;
-    background: white;
-    box-shadow: 4px 4px 10px rgba(0,0,0,0.1);
-}
-
-/* Salik Grid */
-.salik-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.salik-item {
-    background: #006052;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: transform 0.3s;
-}
-
-.salik-item:hover {
-    transform: translateY(-5px);
-    background: #2ac2a9;
-}
-
-/* Fix for your Details/Summary overlap */
-summary {
-    cursor: pointer;
-    font-weight: bold;
-    padding: 10px;
-    background: #f4fffc;
-    border: 1px solid #006052;
-    border-radius: 5px;
-}
-
-.details-content {
-    padding: 15px;
-    background: white;
-    border: 1px solid #ddd;
-    border-top: none;
-} 
-
-	    </style>
+        /* Animation class to be used with JS */
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+    </style>
 </head>
 
 <body>
-    <h1 style="margin:0;"class="h1">Vivienne's E-Portfolio</h1>
+    <div id="progress-container"><div id="progress-bar"></div></div>
+    
+    <h1 style="margin:0;" class="h1">Vivienne's E-Portfolio</h1>
 
     <nav class="navbar">
         <a class="nava" href="index.html">My Personal Space</a>
@@ -111,95 +39,87 @@ summary {
         <span class="navspan"></span>
     </nav>
 
-
-<div class="h2">
-<img src="AP CONTENT.png" alt="ARALING PANLIPUNAN CONTENT BANNER" width="100%" height="100%">
-</div>
-
-<br>
-<hr style="border: 7px dotted #006052;">
-<br>
-
-<div class="layout">
-    <aside class="sidebar">
-        <h2>Aralin</h2>
-        <ul>
-			<li><a href="AP.html">Yunit II - Maykroekonomiks </a></li>
-            <li><a href="Q2A1.html">Q2 Demand</a></li>
-            <li><a href="Q2A2.html">Q2 Supply</a></li>
-            <li><a href="Q2A3.html">Q2 Price Elasticity</a></li>
-            <li><a href="Q2A4.html">Q2 Market Equilibrium</a></li>
-            <li><a href="Q2A5.html">Q2 Iba't Ibang Estruktura sa Pamilihan</a></li>
-            <li><a href="Q2A6.html">Q2 Bahaging Ginagampanan ng Pamahalaan sa Regulasyon ng mga Gawaing Pangkabuhayan</a></li>
-            <li><a href="Q2REF.html">Q2 Reflection</a></li>
-			<li><a href="AP4.html">Yunit IV - Pambansang Kaunlaran </a></li>
-            <li><a href="Q4A1.html">Q4 Pambansang Kaunlaran</a></li>
-            <li><a href="Q4A2.html">Q4 Sektor ng Agrikultura</a></li>
-            <li><a href="Q4A3.html">Q4 Sektor ng Industriya</a></li>
-            <li><a href="Q4A4.html">Q4 Sektor ng Paglilingkod</a></li>
-            <li><a href="Q4A5.html">Q4 Impormal Sektor</a></li>
-            <li><a href="Q4A6.html">Q4 Kalakalang Panlabas</a></li>
-            <li><a href="Q4REF.html">Q4 Reflection</a></li>
-        </ul>
-    </aside>
-
-    <main class="main-content">
-        <h1>AP CONTENTS</h1>
-        <pre class="l1">
-
-<div class="main-content">
-    <section class="lesson-header">
-        <h1>Yunit IV: Pambansang Kaunlaran</h1>
-        <p class="subtitle">Pag-unawa sa Konsepto at Palatandaan ng Pag-unlad</p>
-    </section>
-
-    <div class="l1">
-        <h3>Yugto ng Pamumuhay ng Tao</h3>
-        <div class="timeline-grid">
-            <span>Pangangaso</span>
-            <span>Pagpapastol</span>
-            <span>Pagtatanim</span>
-            <span>Handicraft</span>
-            <span>Industriyal</span>
-        </div>
+    <div class="h2">
+        <img src="AP CONTENT.png" alt="BANNER" width="100%" height="100%">
     </div>
 
-    <div class="comparison-container">
-        <div class="card tradisyunal">
-            <h4>Tradisyunal na Pananaw</h4>
-            <p>Binibigyang diin ang <strong>Income per Capita</strong> at pagdami ng output kaysa sa populasyon.</p>
-        </div>
-        <div class="card makabago">
-            <h4>Makabagong Pananaw</h4>
-            <p>Malawakang pagbabago sa <strong>Sistemang Panlipunan</strong> at pangangailangan ng tao.</p>
-        </div>
-    </div>
+    <br><hr style="border: 7px dotted #006052;"><br>
 
-    <div class="info-block">
-        <details>
-            <summary>Pag-unlad vs. Pagsulong</summary>
-            <div class="details-content">
-                <p><strong>Pag-unlad (Development):</strong> Progresibong proseso; ang "yamang buhay" (Amartya Sen).</p>
-                <p><strong>Pagsulong (Growth):</strong> Ang bunga ng pag-unlad na <em>nakikita</em> at <em>nasusukat</em> (Fajardo).</p>
+    <div class="layout">
+        <aside class="sidebar">
+            <h2>Aralin</h2>
+            <ul>
+                <li><a href="AP.html">Yunit II - Maykroekonomiks</a></li>
+                <li><a href="AP4.html">Yunit IV - Pambansang Kaunlaran</a></li>
+                <li><a href="Q4A1.html">Q4 Pambansang Kaunlaran</a></li>
+                </ul>
+        </aside>
+
+        <main class="main-content">
+            <section class="lesson-header reveal">
+                <h1>Yunit IV: Pambansang Kaunlaran</h1>
+                <p class="subtitle">Pag-unawa sa Konsepto at Palatandaan ng Pag-unlad</p>
+            </section>
+
+            <div class="l1 reveal">
+                <h3>Yugto ng Pamumuhay ng Tao</h3>
+                <div class="timeline-grid">
+                    <span>Pangangaso</span>
+                    <span>Pagpapastol</span>
+                    <span>Pagtatanim</span>
+                    <span>Handicraft</span>
+                    <span>Industriyal</span>
+                </div>
             </div>
-        </details>
+
+            <div class="comparison-container reveal">
+                <div class="card">
+                    <h4>Tradisyunal na Pananaw</h4>
+                    <p>Binibigyang diin ang <strong>Income per Capita</strong>.</p>
+                </div>
+                <div class="card">
+                    <h4>Makabagong Pananaw</h4>
+                    <p>Malawakang pagbabago sa <strong>Sistemang Panlipunan</strong>.</p>
+                </div>
+            </div>
+
+            <div class="info-block reveal">
+                <details>
+                    <summary>Pag-unlad vs. Pagsulong</summary>
+                    <div class="details-content">
+                        <p><strong>Pag-unlad:</strong> Progresibong proseso.</p>
+                        <p><strong>Pagsulong:</strong> Ang bunga na nakikita (Fajardo).</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="salik-grid reveal">
+                <div class="salik-item">Likas na Yaman</div>
+                <div class="salik-item">Yamang Tao</div>
+                <div class="salik-item">Kapital</div>
+                <div class="salik-item">Teknolohiya</div>
+            </div>
+        </main>
     </div>
 
-    <div class="salik-grid">
-        <div class="salik-item">Likas na Yaman</div>
-        <div class="salik-item">Yamang Tao</div>
-        <div class="salik-item">Kapital</div>
-        <div class="salik-item">Teknolohiya</div>
-    </div>
-</div>
-			
-</pre>
-    </main>
-</div>
-
-
-<!--
-hiiii po
--->
+    <script>
+        window.onscroll = function() {
+            // Progress Bar Logic
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("progress-bar").style.width = scrolled + "%";
+            
+            // Scroll Reveal Logic
+            let reveals = document.querySelectorAll(".reveal");
+            for (let i = 0; i < reveals.length; i++) {
+                let windowHeight = window.innerHeight;
+                let elementTop = reveals[i].getBoundingClientRect().top;
+                if (elementTop < windowHeight - 100) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        };
+    </script>
 </body>
 </html>
