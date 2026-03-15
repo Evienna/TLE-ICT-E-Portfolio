@@ -80,42 +80,6 @@ body {
     font-family: georgia;
 }
 
-.layout {
-    display: flex; /* This makes sidebar and content sit side by side */
-    min-height: 100vh;
-}
-
-.sidebar {
-    width: 250px;
-    background-color: #006052;
-    color: white;
-    padding: 20px;
-}
-
-.sidebar h2 {
-    border-bottom: 2px solid #67e5ac;
-    padding-bottom: 5px;
-    margin-top: 20px;
-}
-
-.sidebar ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.sidebar ul li {
-    margin: 10px 0;
-}
-
-.sidebar ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-.sidebar ul li a:hover {
-    text-decoration: underline;
-}
-
 .main-content {
     flex: 1;
     padding: 40px;
@@ -157,4 +121,63 @@ details > *:not(summary) {
 
 div ul {
 	margin-top: -100px;
+}
+
+/* Container that holds Sidebar + Content */
+.layout {
+    display: flex;
+    align-items: flex-start;
+    max-width: 1200px; 
+    margin: 20px auto; 
+    gap: 30px;
+}
+
+/* Sidebar Box */
+.sidebar {
+    width: 280px;
+    flex-shrink: 0; /* Keeps width consistent */
+    background-color: #006052;
+    color: white;
+    padding: 25px;
+    border-radius: 15px;
+    position: sticky;
+    top: 20px;
+    box-sizing: border-box;
+}
+
+/* Sidebar Title (Aralin) */
+.sidebar h2 {
+    margin: 0 0 15px 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #67e5ac;
+    height: auto;
+    font-family: Georgia, serif; /* Keeps font consistent */
+    line-height: 1.2;
+}
+
+/* The List of Links */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    transition: all 0.3s ease;
+    display: block;
+    padding: 8px 10px;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.sidebar ul li a:hover {
+    background: rgba(255, 255, 255, 0.15);
+    padding-left: 18px; /* The "slide" effect */
+    color: #67e5ac;
 }
