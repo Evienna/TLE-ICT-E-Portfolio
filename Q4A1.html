@@ -25,22 +25,40 @@
 
 .layout {
     display: flex;
-    align-items: flex-start;
-    max-width: 1200px; /* This keeps the whole group aligned with the banner */
-    margin: 20px auto; /* This centers the WHOLE thing (Sidebar + Content) */
-    gap: 20px;
+    align-items: flex-start; /* Keeps them aligned at the top */
+    max-width: 1200px; 
+    margin: 20px auto; 
+    gap: 30px; /* Gives them some breathing room */
 }
 
 .sidebar {
-    width: 250px;
-    flex-shrink: 0; /* Prevents the sidebar from squishing */
+    width: 280px; /* Set a definitive width */
+    flex-shrink: 0; /* CRITICAL: This stops the sidebar from shrinking like in pic 3 */
     background-color: #006052;
     color: white;
-    padding: 20px;
+    padding: 25px;
     border-radius: 15px;
     position: sticky;
     top: 20px;
-    /* Removed extra margins that might pull it up */
+    box-sizing: border-box;
+}
+
+.sidebar h2 {
+    margin: 0 0 15px 0; /* Adds space specifically below the word Aralin */
+    padding-bottom: 10px;
+    border-bottom: 2px solid #67e5ac;
+    height: auto; /* Ensures it doesn't have a tiny fixed height */
+    line-height: 1.2;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Removes any leftover negative margins */
+}
+
+.sidebar ul li {
+    margin-bottom: 12px;
 }
 
 .main-content {
